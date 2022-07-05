@@ -24,7 +24,7 @@ public class Primaire {
 				// (nombre divisible par 1 et par lui-même)
 				if (i % j == 0) {
 					if (i == j) {
-						// une fois les contions remplies on affiche les nombres primaires
+						// une fois les conditions remplies on affiche les nombres primaires
 						System.out.print(" ");
 						System.out.print(i);
 					} else {
