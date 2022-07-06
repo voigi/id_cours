@@ -20,7 +20,7 @@ public class Primaire {
 		for (int i = 1; i <= 100; i++) {
 			// Creation d'une boucle for à l'interieur de celle-ci
 			for (int j = 2; j <= i; j++) {
-				// Ici , on met en place nos conditions afin de chercher nos nombres primaires
+				// Ici  on met en place nos conditions afin de chercher nos nombres primaires
 				// (nombre divisible par 1 et par lui-même)
 				if (i % j == 0) {
 					if (i == j) {
