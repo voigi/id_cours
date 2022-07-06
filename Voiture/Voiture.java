@@ -48,12 +48,12 @@ public class Voiture {
         }
       public  void afficher() {
             System.out.println("Caracteristiques:");
-            System.out.println("Marque: "+this.marque);
-            System.out.println("Modele: "+this.model);
-            System.out.println("Poids de la voiture: "+this.poids+"kg");
-            System.out.println("Nombre de places: "+this.places+"places");
-            System.out.println("Taille: "+this.taille);
-            System.out.println("vitesse: "+this.vitesse+"km/h");
+            System.out.println("Marque: "+ this.marque);
+            System.out.println("Modele: "+ this.model);
+            System.out.println("Poids de la voiture: "+ this.poids+"kg");
+            System.out.println("Nombre de places: "+ this.places+"places");
+            System.out.println("Taille: "+ this.taille);
+            System.out.println("vitesse: "+ this.vitesse+"km/h");
         }
 
     public static void main(String[] args) {
