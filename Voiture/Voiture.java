@@ -4,7 +4,7 @@
 package Voiture;
 
 /**
- * @author Stagiaire
+ * @author Voigi
  *
  */
 public class Voiture {
@@ -12,6 +12,7 @@ public class Voiture {
     /**
      * @param args
      */
+	//Attributs de l'objet
     String marque;
     String model;
     int poids;
@@ -19,6 +20,7 @@ public class Voiture {
     double taille;
     double vitesse;
     
+    //Constructeur vide (parent)
     public  Voiture(){
     }
     
@@ -30,6 +32,7 @@ public class Voiture {
      * @param taillle
      * @param vitesse
      */
+    //Constructeur avec les attributs de l'objet
     public Voiture(String marque, String model, int poids, int places, double taille, double vitesse) {
         super();
         this.marque = marque;
@@ -39,23 +42,24 @@ public class Voiture {
         this.taille = taille;
         this.vitesse = vitesse;
     }
-
+      //Methodes de l'objet
       public  String accelerer(int i) {
             return  "Je roule à " + i +"km/h";    
         }
       public  String stopper() {
             return  "Je freine";    
         }
+      // affichage des caracteristiques de l'objet
       public  void afficher() {
             System.out.println("Caracteristiques:");
-            System.out.println("Marque: "+ this.marque);
-            System.out.println("Modele: "+ this.model);
-            System.out.println("Poids de la voiture: "+ this.poids+"kg");
-            System.out.println("Nombre de places: "+ this.places+"places");
-            System.out.println("Taille: "+ this.taille);
-            System.out.println("vitesse: "+ this.vitesse+"km/h");
+            System.out.println("Marque: " + this.marque);
+            System.out.println("Modele: " + this.model);
+            System.out.println("Poids de la voiture: " + this.poids+"kg");
+            System.out.println("Nombre de places: " + this.places+"places");
+            System.out.println("Taille: " + this.taille);
+            System.out.println("vitesse: " + this.vitesse+"km/h");
         }
-
+     // Voiture 1
     public static void main(String[] args) {
         Voiture clio ;
         clio = new Voiture("Renault", "Clio",1240,5,1.250, 30);
@@ -69,6 +73,7 @@ public class Voiture {
         clio.afficher();
         System.out.println(" ");
         
+        //Voiture2
         Voiture clio2 ;
         clio2 = new Voiture("Renault", "Clio 2", 35,5,1.250, 15.5);
         System.out.print(clio2.marque);
