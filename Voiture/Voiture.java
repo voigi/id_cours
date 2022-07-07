@@ -20,6 +20,7 @@ public class Voiture {
 	      double vitesse;
     
     public  Voiture(){
+	    super();
     }
 	
 	/**
