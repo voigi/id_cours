@@ -14,10 +14,9 @@ public class Voiture {
 	 */
 	      String marque;
 	      String model;
-	      int poids;
-	      int places;
-	      double taille;
-	      double vitesse;
+	      String couleur;
+	      boolean moteurDemarre = false;
+	      int vitesse;
     
     public  Voiture(){
 	    super();
@@ -26,23 +25,27 @@ public class Voiture {
 	/**
 	 * @param marque
 	 * @param model
-	 * @param poids
-	 * @param places
-	 * @param taillle
+	 * @param couleur
 	 * @param vitesse
 	 */
-	public Voiture(String marque, String model, int poids, int places, double taille, double vitesse) {
+	public Voiture(String marque, String model, String couleur, int vitesse) {
 		super();
 		this.marque = marque;
 		this.model = model;
-		this.poids = poids;
-		this.places = places;
-		this.taille = taille;
-		this.vitesse = vitesse;
+		this.couleur = couleur;
+		this.moteurDemarre = false;
+		this.vitesse = 0;
 	}
 
-	  public  String accelerer(int i) {
-			return  "Je roule à " + i +"km/h";	
+          public void demarrer() {
+		this.moteurDemarre = true;
+	}
+	  public  int accelerer(int vitesseEnplus) {
+			if (this.moteurDemarre) {
+			this.vitesse += vitesseEnplus;
+		}
+		
+		return this.vitesse;
 	    }
 	  public  String stopper() {
 			return  "Je freine";	
@@ -54,9 +57,8 @@ public class Voiture {
 		 System.out.println("");
 		 System.out.println("Marque: " + this.marque);
 		 System.out.println("Modele: " + this.model);
-		 System.out.println("Poids de la voiture: " + this.poids+"kg");
-		 System.out.println("Nombre de places: " + this.places+"places");
-		 System.out.println("Taille: " + this.taille);
+		 System.out.println("couleur : " + this.couleur);
+		 System.out.println("en marche : " + this.moteurDemarre);
 		 System.out.println("vitesse: " + this.vitesse+"km/h");
 		 System.out.println("");
 		 System.out.println("*****************");
@@ -65,7 +67,8 @@ public class Voiture {
 
 	public static void main(String[] args) {
 		Voiture clio ;
-		clio = new Voiture("Renault", "Clio", 35,5,1.250, 10.5);
+		clio = new Voiture("Renault", "Clio", "bleu",10);
+		clio.demarrer();
 		System.out.print(clio.marque);
 		System.out.print(" ");
 		System.out.print(clio.model);
@@ -78,7 +81,8 @@ public class Voiture {
 		
 		Voiture clio2 ;
 		
-		clio2 = new Voiture("Renault", "Clio 2", 35,5,1.250, 15.5);
+		clio2 = new Voiture("Renault", "Clio 2", "Rouge",5);
+		clio2.demarrer();
 		System.out.print(clio2.marque);
 		System.out.print(" ");
 		System.out.print(clio2.model);
@@ -90,4 +94,3 @@ public class Voiture {
 	}
 
 }
-
