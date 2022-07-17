@@ -1,4 +1,4 @@
-package Personne;
+package ListePersonne;
 
 public class Personne {
 
